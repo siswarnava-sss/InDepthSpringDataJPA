@@ -40,7 +40,7 @@ public class Course {
     )
     private Teacher teacher;
 
-    @ManyToMany(cascade = CascadeType.ALL)
+    @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     @JoinTable(
             name = "course_id"
             ,joinColumns = @JoinColumn(
